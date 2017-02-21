@@ -1,1 +1,1 @@
-# moviecat
+# Angular Boilerplate
