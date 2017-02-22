@@ -28,6 +28,7 @@
 //创建script标签
 			var scriptElement = $document[0].createElement('script');
 			scriptElement.src = url + querystring;
+			console.log(url + querystring);
 			// 不推荐
 			$window[cbFuncName] = function(data) {
 				callback(data);
