@@ -128,10 +128,14 @@ body {
 }
 
 .spinner {
-  margin: 100px auto;
+  /*margin: 0px auto;*/
   width: 40px;
   height: 40px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
   text-align: center;
   -webkit-animation: sk-rotate 2.0s infinite linear;
   animation: sk-rotate 2.0s infinite linear;
@@ -198,6 +202,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
+
   background-color: rgba(0, 0, 0, .4);
   z-index: 2000;
 }

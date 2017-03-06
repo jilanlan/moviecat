@@ -10,7 +10,7 @@
   // 配置模块的路由
   module.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/:category/:page', {
-      templateUrl: 'movie_list/view.html',
+      templateUrl: 'app/movie_list/view.html',
       controller: 'MovieListController'
     });
   }]);
