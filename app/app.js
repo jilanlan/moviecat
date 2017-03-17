@@ -9,8 +9,8 @@ angular.module('moviecat', [
 // 为模块定义一些常量
 	   .constant('AppConfig', {
 	    pageSize: 10,//每页显示10条
-	    listApiAddress: 'http://api.douban.com/v2/movie/',//豆瓣API
-	    detailApiAddress: 'http://api.douban.com/v2/movie/subject/'
+	    listApiAddress: 'https://api.douban.com/v2/movie/',//豆瓣API
+	    detailApiAddress: 'https://api.douban.com/v2/movie/subject/'
 	   })
 //
 	   .config(['$routeProvider', function($routeProvider) {
