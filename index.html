@@ -23,8 +23,14 @@
           <a class="navbar-brand" href="#">豆瓣电影</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
+          <ul class="nav navbar-nav navbar-right" ng-controller="CheckController" ng-hide="check()">
+            <!-- <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li> -->
+            <li auto-focus ><a href="#/in_theaters/1">正在热映</a></li>
+          	<li auto-focus><a href="#/coming_soon/1">即将上映</a></li>
+          	<li auto-focus><a href="#/top250/1">TOP250</a></li>
           </ul>
           <form class="navbar-form navbar-right" ng-controller="SearchController" ng-submit="search()">
             <input type="text" class="form-control" placeholder="Search..." ng-model="input">
@@ -45,6 +51,12 @@
        		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view></div>
       	</div>
     </div>
+
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
     <script src="app/bower_components/angular/angular.js"></script>
   	<script src="app/bower_components/angular-route/angular-route.js"></script>
   <!-- 主模块 -->

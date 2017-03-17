@@ -16,16 +16,30 @@ angular.module('moviecat', [
 	   .config(['$routeProvider', function($routeProvider) {
          $routeProvider.otherwise({ redirectTo: '/in_theaters/1' });
        }])
+       .controller('CheckController', ['$scope', function($scope){
+       	   $scope.check = function() {
+               var width_screen = screen.width;
+               if (width_screen < 600){
+               	return true;
+               }else{
+               	return false;
+               }
+
+           };
+       }])
 //搜索框控制器
        .controller('SearchController', [
 		    '$scope',
 		    '$route',
 		    'AppConfig',
-	    function($scope, $route, AppConfig) {
+	    	function($scope, $route, AppConfig) {
 		      $scope.input = ''; // 取文本框中的输入
 		      $scope.search = function() {
 		        // console.log($scope.input);
 		      $route.updateParams({ category: 'search', q: $scope.input });
 		      };
-	    }
+
+	    	}
+
+
   	   ]);
