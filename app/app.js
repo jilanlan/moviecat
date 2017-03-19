@@ -16,17 +16,18 @@ angular.module('moviecat', [
 	   .config(['$routeProvider', function($routeProvider) {
          $routeProvider.otherwise({ redirectTo: '/in_theaters/1' });
        }])
-       .controller('CheckController', ['$scope', function($scope){
-       	   $scope.check = function() {
-               var width_screen = screen.width;
-               if (width_screen < 600){
-               	return true;
-               }else{
-               	return false;
-               }
-
-           };
-       }])
+      //  .controller('CloseController', ['$scope', function($scope){
+      //  	   $scope.close = function() {
+      //         var navbar = document.getElementById("navbar");
+      //         var display = navbar.style.display;
+      //         if ( display === "none" ) {
+      //            navbar.show();
+    		// 			} else {
+      //   					navbar.hide();
+    		// 			}
+      //      };
+      // //
+      //  }])
 //搜索框控制器
        .controller('SearchController', [
 		    '$scope',
@@ -37,6 +38,11 @@ angular.module('moviecat', [
 		      $scope.search = function() {
 		        // console.log($scope.input);
 		      $route.updateParams({ category: 'search', q: $scope.input });
+		      $('.navbar-toggle').addClass("collapsed");
+					$('.navbar-toggle').attr("aria-expanded",false);//button
+					$('#navbar').removeClass("in");
+					$('#navbar').attr("aria-expanded",false);
+
 		      };
 
 	    	}

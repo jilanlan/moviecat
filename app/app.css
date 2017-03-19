@@ -211,3 +211,6 @@ body {
 .pager a{
 	cursor: pointer;
 }
+.none{
+	display: none;
+}

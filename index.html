@@ -22,15 +22,15 @@
           </button>
           <a class="navbar-brand" href="#">豆瓣电影</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right" ng-controller="CheckController" ng-hide="check()">
+        <div id="navbar" class="navbar-collapse collapse"  >
+          <ul class="nav navbar-nav navbar-right"  >
 
             <li auto-focus ><a href="#/in_theaters/1">正在热映</a></li>
           	<li auto-focus><a href="#/coming_soon/1">即将上映</a></li>
           	<li auto-focus><a href="#/top250/1">top250</a></li>
           </ul>
-          <form class="navbar-form navbar-right" ng-controller="SearchController" ng-submit="search()">
-            <input type="text" class="form-control" placeholder="Search..." ng-model="input">
+          <form class="navbar-form navbar-right" ng-controller="SearchController" ng-submit="search()" >
+            <input type="text" class="form-control" placeholder="Search..." ng-model="input" >
           </form>
         </div>
       </div>
@@ -64,6 +64,14 @@
   	<script src="app/movie_list/controller.js"></script>
   	<script src="app/movie_detail/controller.js"></script>
   <!-- 其他子模块 -->
+  <script>
+  $(".navbar-nav > li > a").click(function(){
+		$('.navbar-toggle').addClass("collapsed");
+		$('.navbar-toggle').attr("aria-expanded",false);//button
+		$('#navbar').removeClass("in");
+		$('#navbar').attr("aria-expanded",false);
+	});
+  </script>
 </body>
 
 </html>
